@@ -1,0 +1,106 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-h);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+    background: transparent;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    transition: background-color 0.3s, backdrop-filter 0.3s, -webkit-backdrop-filter 0.3s;
+}
+
+.scrolled {
+    background: color-mix(in srgb, var(--color-bg) 70%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.logo {
+    color: var(--color-text);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.themeBtn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--color-text);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.hamburger {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 2px;
+    background: var(--color-text);
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.nav {
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    width: 100%;
+    background: var(--color-bg);
+    transform: translateY(-120%);
+    transition: transform 0.3s;
+    z-index: 90;
+}
+
+.nav.open {
+    transform: translateY(0);
+}
+
+.nav ul {
+    margin: 0;
+    padding: 10px 20px 20px;
+    list-style: none;
+}
+
+.nav a {
+    display: block;
+    padding: 14px 0;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+

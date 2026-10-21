@@ -1,0 +1,13 @@
+.intro {
+    padding: var(--space-4) var(--space-2);
+    background: var(--gradient-intro);
+    color: var(--color-on-gradient);
+}
+
+.title {
+    font-size: var(--fs-xl);
+}
+
+.desc {
+    font-size: var(--fs-md);
+}

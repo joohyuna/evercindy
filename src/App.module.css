@@ -1,0 +1,4 @@
+.main {
+    padding: var(--space-2);
+    display: flex;
+}

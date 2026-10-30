@@ -33,6 +33,10 @@
     align-items: center;
     gap: 16px;
 }
+.logo, .actions {
+    position: relative;
+    z-index: 91;
+}
 
 .themeBtn {
     width: 32px;
@@ -41,8 +45,9 @@
     border: 0;
     background: none;
     color: var(--color-text);
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 
@@ -77,17 +82,21 @@
 
 .nav {
     position: fixed;
-    top: var(--header-h);
+    top: 0;
     left: 0;
     width: 100%;
-    background: var(--color-bg);
-    transform: translateY(-120%);
-    transition: transform 0.3s;
+    padding-top: var(--header-h);
+    background: var(--color-surface);
     z-index: 90;
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition: transform 0.3s, visibility 0.3s;
 }
 
 .nav.open {
     transform: translateY(0);
+    visibility: visible;
+    transition: transform 0.3s;
 }
 
 .nav ul {

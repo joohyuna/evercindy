@@ -1,8 +1,10 @@
+import styles from "./Footer.module.css";
+
 function Footer() {
-    return <footer>
-        <div>
-            &copy; 2026 evercindy all rights reserved
-        </div>
+    return <footer className={styles.footer}>
+        <p className={styles.copy}>
+            <small>&copy; {new Date().getFullYear()} EverCindy. All rights reserved.</small>
+        </p>
     </footer>
 }
 
